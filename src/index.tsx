@@ -35,6 +35,7 @@ const composeEnhancers =
 const rootReducer = combineReducers({
   user: userReducer,
 });
+export type RootState = ReturnType<typeof rootReducer>;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
@@ -51,5 +52,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-export type RootState = ReturnType<typeof rootReducer>;
