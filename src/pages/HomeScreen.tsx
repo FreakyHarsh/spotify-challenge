@@ -113,7 +113,13 @@ export const HomeScreen = () => {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Switch>
-          <Route path='/home'>
+          <Route path='/home' exact>
+            <Home />
+          </Route>
+          <Route path='/search' exact>
+            <Home />
+          </Route>
+          <Route path='/logout'>
             <Home />
           </Route>
         </Switch>
