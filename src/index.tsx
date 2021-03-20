@@ -13,6 +13,10 @@ import userReducer from "./store/reducers/user.reducer";
 
 const theme = createMuiTheme({
   palette: {
+    primary: {
+      main: "#1db954",
+      contrastText: "white",
+    },
     action: {
       disabledBackground: `rgb(179,178,164)`,
     },
@@ -33,7 +37,7 @@ const composeEnhancers =
   (window && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const rootReducer = combineReducers({
-  user: userReducer,
+  userState: userReducer,
 });
 export type RootState = ReturnType<typeof rootReducer>;
 
