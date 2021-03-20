@@ -10,6 +10,7 @@ import App from "./App";
 import userReducer from "./store/reducers/user.reducer";
 
 (window as any).domainURL = process.env.REACT_APP_DOMAIN_URL;
+(window as any).baseURL = "https://api.spotify.com/v1";
 
 const theme = createMuiTheme({
   palette: {

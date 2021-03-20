@@ -17,11 +17,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 
 import { RootState } from "..";
 import { Home } from "../components/Home";
 import { spotifyUserType } from "../types/spotifyUserType";
+import { Search } from "../components/Search";
 
 export const HomeScreen = () => {
   const theme = useTheme();
@@ -41,7 +42,7 @@ export const HomeScreen = () => {
         <ListItem>
           <img src={logo} alt='Spotify Logo' style={{ width: "100%" }} />
         </ListItem>
-        {["Home", "Search", "Logout"].map((text, index) => (
+        {["Home", "Search"].map((text, index) => (
           <ListItem
             button
             key={text}
@@ -117,10 +118,10 @@ export const HomeScreen = () => {
             <Home />
           </Route>
           <Route path='/search' exact>
-            <Home />
+            <Search />
           </Route>
           <Route path='/logout'>
-            <Home />
+            <Redirect to='/' />
           </Route>
         </Switch>
       </main>

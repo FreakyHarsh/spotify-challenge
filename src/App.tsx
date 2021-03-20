@@ -12,8 +12,6 @@ const spotify = new SpotifyWebApi();
 function App() {
   const dispatch = useDispatch();
   const history = useHistory();
-  // const userState = useSelector((state: RootState) => state.user);
-  // const token = userState.token;
   const [token, setToken] = useState("");
   useEffect(() => {
     const accessToken = getToken().access_token;
