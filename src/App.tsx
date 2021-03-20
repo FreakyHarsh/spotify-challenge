@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Switch, Route, Link, useRouteMatch, useParams, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import SpotifyWebApi from "spotify-web-api-js";
-import { Login } from "./pages/Login";
-import { getToken } from "./utils/getToken";
-import { setUser, setUserToken } from "./store/Actions/actions";
-import { RootState } from "./index";
+
 import { HomeScreen } from "./pages/HomeScreen";
+import { Login } from "./pages/Login";
+import { setUser, setUserToken } from "./store/Actions/actions";
+import { getToken } from "./utils/getToken";
 
 const spotify = new SpotifyWebApi();
 function App() {

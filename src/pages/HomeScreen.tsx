@@ -12,7 +12,6 @@ import {
   Typography,
   useTheme,
 } from "@material-ui/core";
-import logo from "../assets/images/logo.png";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState } from "react";
@@ -20,9 +19,10 @@ import { useSelector } from "react-redux";
 import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 
 import { RootState } from "..";
+import logo from "../assets/images/logo.png";
 import { Home } from "../components/Home";
-import { spotifyUserType } from "../types/spotifyUserType";
 import { Search } from "../components/Search";
+import { spotifyUserType } from "../types/spotifyUserType";
 
 export const HomeScreen = () => {
   const theme = useTheme();
@@ -160,7 +160,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "white",
     },
     content: {
-      // flexGrow: 1,
       padding: theme.spacing(3),
       width: "100%",
     },
